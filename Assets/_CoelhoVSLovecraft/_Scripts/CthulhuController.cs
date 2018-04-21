@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class CthulhuController : MonoBehaviour {
 
-	[Header("MainProperties")]
-	public float damageFlashingTime = 0.5f;
+	[Header("DamagingProperties")]
+	public float damageEffectTime = 0.5f;
+	public float damageShakes = 4;
+	public float shakeAmount = 1.0f;
+	public float decreaseFactor = 1.0f;
+
+	private float damageCurrentDuration = 0.0f;
 
 	[Space(20)]
 	[Header("Referencies")]
@@ -14,14 +19,26 @@ public class CthulhuController : MonoBehaviour {
 	private SpriteRenderer mySpriteRenderer{get{return GetComponent<SpriteRenderer>();}}
 	private Color initialColor;
 
-	// Use this for initialization
+	private Vector3 originalPos;
+
 	void Start () {
 		initialColor = mySpriteRenderer.color;
+		originalPos = transform.position;
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		
+        if (damageCurrentDuration > 0)
+        {
+            transform.localPosition = originalPos + Vector3.right * (Random.insideUnitSphere * shakeAmount).x;
+            damageCurrentDuration -= Time.deltaTime * decreaseFactor;
+        }
+        else
+		// Reset damage effect
+        {
+            mySpriteRenderer.color = initialColor;
+            damageCurrentDuration = 0f;
+            transform.localPosition = originalPos;
+        }
 	}
 
 	public Vector2 GetCoelhoTarget()
@@ -31,14 +48,8 @@ public class CthulhuController : MonoBehaviour {
 
 	private void DamageByWord()
 	{
-		Debug.Log("Cthulhu receive damage!");
 		mySpriteRenderer.color = Color.red;
-		Invoke("ResetColor", damageFlashingTime);
-	}
-	
-	private void ResetColor()
-	{
-		mySpriteRenderer.color = initialColor;
+		this.damageCurrentDuration = damageEffectTime;
 	}
 
     private void OnTriggerEnter2D(Collider2D other)
