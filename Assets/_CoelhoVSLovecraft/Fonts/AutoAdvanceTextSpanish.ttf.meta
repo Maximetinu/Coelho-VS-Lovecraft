@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 7e19c9903ed9f0149a0a8b23215926e2
+timeCreated: 1524329612
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: AutoAdvanceText
+  fontNames:
+  - AutoAdvanceTextSpanish
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 73c41f4a847628942b6560a2a51fd968, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
