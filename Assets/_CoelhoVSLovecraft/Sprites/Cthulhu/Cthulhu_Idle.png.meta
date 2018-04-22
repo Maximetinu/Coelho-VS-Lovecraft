@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: c765c3884538aa743a8549d3ee07fdf0
-timeCreated: 1524336394
+guid: 0ed5a241a9d50f24aa8444e2ae0c4875
+timeCreated: 1524406860
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -62,7 +62,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -72,7 +72,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -82,7 +82,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: iPhone
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -92,7 +92,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -102,7 +102,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Windows Store Apps
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -119,10 +119,10 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 129
-        width: 138
-        height: 127
-      alignment: 0
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -132,11 +132,11 @@ TextureImporter:
       name: Cthulhu_Idle_1
       rect:
         serializedVersion: 2
-        x: 140
-        y: 129
-        width: 138
-        height: 127
-      alignment: 0
+        x: 157
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -146,11 +146,11 @@ TextureImporter:
       name: Cthulhu_Idle_2
       rect:
         serializedVersion: 2
-        x: 284
-        y: 129
-        width: 138
-        height: 127
-      alignment: 0
+        x: 314
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -160,11 +160,11 @@ TextureImporter:
       name: Cthulhu_Idle_3
       rect:
         serializedVersion: 2
-        x: 10
+        x: 471
         y: 0
-        width: 138
-        height: 127
-      alignment: 0
+        width: 157
+        height: 139
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []

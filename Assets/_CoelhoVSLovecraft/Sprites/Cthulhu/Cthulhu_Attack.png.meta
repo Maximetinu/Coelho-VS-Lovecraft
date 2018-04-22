@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 0c7da254dc1dc2049b4a52311cb0ec85
-timeCreated: 1524347808
+guid: 718e34288377fd2499567cf011eaf06e
+timeCreated: 1524406860
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -64,7 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -74,7 +74,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -84,7 +84,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: iPhone
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -94,7 +94,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -104,7 +104,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Windows Store Apps
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -122,9 +122,9 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
-        height: 150
-      alignment: 0
+        width: 157
+        height: 139
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -134,11 +134,11 @@ TextureImporter:
       name: Cthulhu_Attack_1
       rect:
         serializedVersion: 2
-        x: 200
+        x: 157
         y: 0
-        width: 200
-        height: 150
-      alignment: 0
+        width: 157
+        height: 139
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -148,11 +148,11 @@ TextureImporter:
       name: Cthulhu_Attack_2
       rect:
         serializedVersion: 2
-        x: 400
+        x: 314
         y: 0
-        width: 200
-        height: 150
-      alignment: 0
+        width: 157
+        height: 139
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -162,11 +162,11 @@ TextureImporter:
       name: Cthulhu_Attack_3
       rect:
         serializedVersion: 2
-        x: 600
+        x: 471
         y: 0
-        width: 200
-        height: 150
-      alignment: 0
+        width: 157
+        height: 139
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -176,11 +176,11 @@ TextureImporter:
       name: Cthulhu_Attack_4
       rect:
         serializedVersion: 2
-        x: 800
+        x: 628
         y: 0
-        width: 200
-        height: 150
-      alignment: 0
+        width: 157
+        height: 139
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -190,11 +190,11 @@ TextureImporter:
       name: Cthulhu_Attack_5
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 785
         y: 0
-        width: 200
-        height: 150
-      alignment: 0
+        width: 157
+        height: 139
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []

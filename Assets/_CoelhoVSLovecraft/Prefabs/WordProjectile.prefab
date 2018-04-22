@@ -180,7 +180,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 3
 --- !u!114 &114605400566644592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,7 +311,12 @@ MonoBehaviour:
   target: {x: 2, y: 2}
   initialScale: 0.3
   timeToResetScale: 0.2
-  explosionPrefab: {fileID: 0}
+  explosionCthulhuPrefab: {fileID: 1600652426289676, guid: 1c4e55193187434468389c26257da61b,
+    type: 2}
+  explosionCthulhuOffset: {x: 0, y: 2}
+  explosionAirPrefab: {fileID: 1916227636024776, guid: f4d7891a1f51bf542aa62bdaaafcbf00,
+    type: 2}
+  explosionAirOffset: {x: 0, y: 0}
 --- !u!114 &114872081895361880
 MonoBehaviour:
   m_ObjectHideFlags: 1

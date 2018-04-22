@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CoelhoController : MonoBehaviour {
 
-	public float wordCooldown = 1.0f;
+	public float wordCooldown = 0.5f;
 	public List<string> coelhoWords;
 
 	[Space(20)]
@@ -29,7 +29,7 @@ public class CoelhoController : MonoBehaviour {
 		GameObject firingWord = Instantiate(wordProjectilePrefab, GameController.Instance.DynamicTransform);
 		firingWord.GetComponent<WordProjectile>().wordText = GetRandomWord();
 		firingWord.transform.position = wordSpawn.position;
-		firingWord.GetComponent<WordProjectile>().target = GameController.Instance.cthuluController.GetCoelhoTarget();
+		firingWord.GetComponent<WordProjectile>().target = GameController.Instance.cthulhuController.GetCoelhoTarget();
 		lastShotTime = Time.time;
 
 		myAnimator.SetTrigger("Attack");

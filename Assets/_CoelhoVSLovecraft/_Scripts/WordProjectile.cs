@@ -18,7 +18,11 @@ public class WordProjectile : MonoBehaviour {
 
 	[Space(10)]
 	[Header("Referencies")]
-	public GameObject explosionPrefab;
+	public GameObject explosionCthulhuPrefab;
+    public Vector2 explosionCthulhuOffset = Vector2.zero;
+	[Space(2)]
+	public GameObject explosionAirPrefab;
+    public Vector2 explosionAirOffset = Vector2.zero;
 
 	private Vector2 direction; // CTHULU.pos - COELHO.pos
 
@@ -55,16 +59,27 @@ public class WordProjectile : MonoBehaviour {
 		return new Vector3(vector.x, vector.y, 0.0f);
 	}
 
-	private void DestroyWord()
+	private void InstantiateExplosion(GameObject explosion, Vector2 offset)
 	{
-		if (explosionPrefab != null)
-			Instantiate(explosionPrefab, GameController.Instance.DynamicTransform).transform.position = transform.position;
+        if (explosion != null)
+            Instantiate(explosion, GameController.Instance.DynamicTransform).transform.position = transform.position + ToVector3(offset);
+	}
+
+	public void DestroyWord()
+	{
+        InstantiateExplosion(explosionAirPrefab, explosionAirOffset);
+        Destroy(gameObject);
+	}
+
+	private void DestroyWordAgainstCthulhu()
+	{
+		InstantiateExplosion(explosionCthulhuPrefab, explosionCthulhuOffset);	
 		Destroy(gameObject);
 	}
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Cthulhu")
-			DestroyWord();
+            DestroyWordAgainstCthulhu();
     }
 }
