@@ -29,6 +29,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1288086486939610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4098212283273096}
+  m_Layer: 0
+  m_Name: WordSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1573573245355610
 GameObject:
   m_ObjectHideFlags: 0
@@ -38,12 +53,25 @@ GameObject:
   m_Component:
   - component: {fileID: 4253365741286392}
   m_Layer: 0
-  m_Name: WordSpawn
+  m_Name: HeadPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4098212283273096
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288086486939610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.61, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4119189658206566}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4119189658206566
 Transform:
   m_ObjectHideFlags: 1
@@ -54,6 +82,7 @@ Transform:
   m_LocalPosition: {x: 14.65, y: -8.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4098212283273096}
   - {fileID: 4253365741286392}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -65,11 +94,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1573573245355610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.61, y: 0, z: 0}
+  m_LocalPosition: {x: -0.23, y: 0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4119189658206566}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &95284089534256760
 Animator:
@@ -121,7 +150,9 @@ MonoBehaviour:
   - "SE\xD1ALES"
   - ALMA
   - "ESP\xCDRITU"
-  wordSpawn: {fileID: 4253365741286392}
+  deathAnimationDelay: 0.5
+  wordSpawn: {fileID: 4098212283273096}
+  headPosition: {fileID: 4253365741286392}
   wordProjectilePrefab: {fileID: 1394385251812366, guid: 3c5c28a030caccb45a7f99ea73c761bc,
     type: 2}
 --- !u!212 &212141279388069492

@@ -13,8 +13,14 @@ public class GameController : MonoBehaviour
     public KeyCode coelhoAttackKey = KeyCode.K;
     public KeyCode cthulhuDefenseKey = KeyCode.S;
 
+    [Space(20)]
+    [Header("References")]
+    public GameObject lightningPrefab;
+
     [HideInInspector]
     public CthulhuController cthulhuController;
+    [HideInInspector]
+    public CoelhoController coelhoController;
 
     public Transform DynamicTransform
     {
@@ -25,6 +31,17 @@ public class GameController : MonoBehaviour
                 dynamicGameObject = new GameObject("_Dynamic");
             return dynamicGameObject.transform;
         }
+    }
+
+    public Vector2 GetCthulhuTarget()
+    {
+        return cthulhuController.GetCoelhoTarget();
+    }
+
+    public void KillCoelho()
+    {
+        Instantiate(lightningPrefab, this.DynamicTransform).transform.position = coelhoController.headPosition.position;
+        coelhoController.Death();
     }
 
     void Awake()
@@ -38,5 +55,6 @@ public class GameController : MonoBehaviour
             Destroy(gameObject);
         }
         cthulhuController = GameObject.FindGameObjectWithTag("Cthulhu").GetComponent<CthulhuController>();
+        coelhoController = GameObject.FindGameObjectWithTag("Coelho").GetComponent<CoelhoController>();
     }
 }

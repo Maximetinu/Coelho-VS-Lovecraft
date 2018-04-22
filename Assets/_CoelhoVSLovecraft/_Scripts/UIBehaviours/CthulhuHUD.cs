@@ -16,7 +16,7 @@ public class CthulhuHUD : MonoBehaviour, IObserver
     private RectTransform rt { get { return GetComponent<RectTransform>(); } }
     private bool currentlyBeingDamaged = false;
     private int currentFrame = 0;
-    // Use this for initialization
+
     void Start()
     {
         GameController.Instance.cthulhuController.AddObserver(this);

@@ -1,20 +1,13 @@
 fileFormatVersion: 2
-guid: 5ef93bf6363848d46873c8ca7476e5a3
-timeCreated: 1524409742
+guid: a0d0e7e0c242d284a940cbd7ef2553af
+timeCreated: 1524434676
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: lightning_0
-    21300002: lightning_1
-    21300004: lightning_2
-    21300006: lightning_3
-    21300008: Lightning_0
-    21300010: Lightning_1
-    21300012: Lightning_2
-    21300014: Lightning_3
-    21300016: Lightning_4
-    21300018: Lightning_5
-    21300020: Lightning_6
+    21300000: Cthulhu_Rage_0
+    21300002: Cthulhu_Rage_1
+    21300004: Cthulhu_Rage_2
+    21300006: Cthulhu_Rage_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -42,7 +35,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -54,11 +47,11 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 7
-  spritePivot: {x: 0.5, y: 0}
-  spritePixelsToUnits: 100
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -72,7 +65,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -82,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -92,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,7 +95,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,7 +105,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,99 +115,57 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lightning_0
+      name: Cthulhu_Rage_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 512
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lightning_1
+      name: Cthulhu_Rage_1
       rect:
         serializedVersion: 2
-        x: 128
+        x: 157
         y: 0
-        width: 128
-        height: 512
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lightning_2
+      name: Cthulhu_Rage_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 314
         y: 0
-        width: 128
-        height: 512
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Lightning_3
+      name: Cthulhu_Rage_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 471
         y: 0
-        width: 128
-        height: 512
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lightning_4
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 512
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lightning_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 512
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Lightning_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 512
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

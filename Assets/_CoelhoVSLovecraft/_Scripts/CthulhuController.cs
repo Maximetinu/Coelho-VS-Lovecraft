@@ -12,6 +12,7 @@ public class CthulhuController : SubjectMonoBehaviour
     [Space(5)]
     public float neededRagePoints = 100.0f;
     public float rageIncrement = 10.0f;
+    public float lightningDelay = 2.0f;
 
     [Space(5)]
     public float defenseCooldown = .5f;
@@ -36,6 +37,7 @@ public class CthulhuController : SubjectMonoBehaviour
     private float currentHP;
     private float currentRage;
     private bool haveCooldown = false;
+    private bool alreadyRaged = false;
 
     void Awake()
     {
@@ -57,10 +59,11 @@ public class CthulhuController : SubjectMonoBehaviour
 
     void Update()
     {
-        if (currentRage >= neededRagePoints)
+        if (!alreadyRaged && currentRage >= neededRagePoints)
         {
-            // KILL COELHO!
-            Debug.Log("CTHULHU ENRAGES!!");
+            myAnimator.SetTrigger("Rage");
+            alreadyRaged = true;
+            Invoke("KillCoelho", lightningDelay);
         }
         else if (!haveCooldown && Input.GetKeyDown(GameController.Instance.cthulhuDefenseKey))
             this.Defense();
@@ -77,6 +80,11 @@ public class CthulhuController : SubjectMonoBehaviour
             damageCurrentDuration = 0f;
             transform.localPosition = originalPos;
         }
+    }
+
+    private void KillCoelho()
+    {
+        GameController.Instance.KillCoelho();
     }
 
     public bool IsBeingDamaged()
