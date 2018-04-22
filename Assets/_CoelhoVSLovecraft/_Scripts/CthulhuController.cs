@@ -7,6 +7,7 @@ public class CthulhuController : SubjectMonoBehaviour
     [Header("Main Properties")]
     public float maxHealthPoints = 100.0f;
     public float hitHPDamage = 10.0f;
+    public float destroyDelay = 0.1f;
 
     [Space(5)]
     public float neededRagePoints = 100.0f;
@@ -89,7 +90,7 @@ public class CthulhuController : SubjectMonoBehaviour
         RaycastHit2D hit2D = Physics2D.Raycast(defenseVertical.position, Vector2.down);
         if (hit2D && hit2D.collider.tag == "Word")
         {
-            hit2D.collider.GetComponent<WordProjectile>().DestroyWord();
+            hit2D.collider.GetComponent<WordProjectile>().DestroyWord(destroyDelay);
             this.currentRage += rageIncrement;
             Notify();
         }

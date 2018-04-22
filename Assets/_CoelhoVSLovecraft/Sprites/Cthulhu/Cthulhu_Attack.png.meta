@@ -10,6 +10,8 @@ TextureImporter:
     21300006: Cthulhu_Attack_3
     21300008: Cthulhu_Attack_4
     21300010: Cthulhu_Attack_5
+    21300012: Cthulhu_Attack_6
+    21300014: Cthulhu_Attack_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -191,6 +193,34 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 785
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 1099
         y: 0
         width: 157
         height: 139

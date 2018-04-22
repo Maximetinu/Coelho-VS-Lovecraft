@@ -439,6 +439,11 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 114705105165740360, guid: faa111861e4ec194b9372525dc3836d0,
+        type: 2}
+      propertyPath: destroyDelay
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: faa111861e4ec194b9372525dc3836d0, type: 2}
   m_IsPrefabParent: 0
