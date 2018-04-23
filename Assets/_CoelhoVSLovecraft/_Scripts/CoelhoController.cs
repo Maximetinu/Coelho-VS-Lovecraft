@@ -40,6 +40,7 @@ public class CoelhoController : MonoBehaviour
         firingWord.GetComponent<WordProjectile>().target = GameController.Instance.GetCthulhuTarget();
         lastShotTime = Time.time;
 
+        AudioController.Instance.PlayThrowWord();
         myAnimator.SetTrigger("Attack");
     }
 

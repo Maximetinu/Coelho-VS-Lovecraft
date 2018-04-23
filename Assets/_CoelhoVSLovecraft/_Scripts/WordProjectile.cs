@@ -71,6 +71,7 @@ public class WordProjectile : MonoBehaviour
     private void InstantiateAirExplosion()
     {
         InstantiateExplosion(explosionAirPrefab, explosionAirOffset);
+        AudioController.Instance.PlayWordDefenseExplosion();
     }
 
     public void DestroyWord(float timeToDestroy)
@@ -82,6 +83,7 @@ public class WordProjectile : MonoBehaviour
     private void DestroyWordAgainstCthulhu()
     {
         InstantiateExplosion(explosionCthulhuPrefab, explosionCthulhuOffset);
+        AudioController.Instance.PlayWordDamageExplosion();
         Destroy(gameObject);
     }
 

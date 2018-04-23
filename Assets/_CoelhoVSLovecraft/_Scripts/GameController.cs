@@ -46,6 +46,8 @@ public class GameController : MonoBehaviour
     public void KillCoelho()
     {
         Instantiate(lightningPrefab, this.DynamicTransform).transform.position = coelhoController.headPosition.position;
+        AudioController.Instance.PlayThunderStarts();
+        AudioController.Instance.StartCoroutine(AudioController.Instance.PlayThunder(0.7f));
         coelhoController.Death();
     }
 

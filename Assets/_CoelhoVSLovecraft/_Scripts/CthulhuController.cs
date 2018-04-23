@@ -72,6 +72,8 @@ public class CthulhuController : SubjectMonoBehaviour
 
         if (!alreadyRaged && currentRage >= neededRagePoints)
         {
+            AudioController.Instance.StartCoroutine(AudioController.Instance.PlayCthulhuRageStarts());
+            AudioController.Instance.StartCoroutine(AudioController.Instance.PlayCthulhuRage());
             myAnimator.SetTrigger("Rage");
             alreadyRaged = true;
             Invoke("KillCoelho", lightningDelay);
@@ -112,6 +114,7 @@ public class CthulhuController : SubjectMonoBehaviour
     private void Defense()
     {
         myAnimator.SetTrigger("Defense");
+        AudioController.Instance.PlayCthulhuDefenseWhiplash();
         RaycastHit2D hit2D = Physics2D.Raycast(defenseVertical.position, Vector2.down);
         if (hit2D && hit2D.collider.tag == "Word")
         {
@@ -136,6 +139,7 @@ public class CthulhuController : SubjectMonoBehaviour
 
     private void Death()
     {
+        AudioController.Instance.StartCoroutine(AudioController.Instance.PlayCthulhuDeath());
         dying = true;
         ResetDamageEffect();
         myAnimator.SetTrigger("Death");
@@ -149,6 +153,7 @@ public class CthulhuController : SubjectMonoBehaviour
         mySpriteRenderer.color = Color.red;
         this.damageCurrentDuration = damageEffectTime;
         this.currentHP -= this.hitHPDamage;
+        AudioController.Instance.PlayCthulhuPain();
         Notify();
     }
 
