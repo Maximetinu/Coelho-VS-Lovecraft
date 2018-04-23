@@ -49,6 +49,11 @@ public class CthulhuHUD : MonoBehaviour, IObserver
     public void OnNotify()
     {
         currentlyBeingDamaged = GameController.Instance.cthulhuController.IsBeingDamaged();
+        if (GameController.Instance.IsCthulhuDead())
+        {
+            CancelInvoke("NextFrame");
+            Debug.Log("Cthulhu HUD Fade out");
+        }
     }
 
     private void OnValidate()

@@ -38,6 +38,7 @@ public class CthulhuController : SubjectMonoBehaviour
     private float currentRage;
     private bool haveCooldown = false;
     private bool alreadyRaged = false;
+    private bool dying = false;
 
     void Awake()
     {
@@ -57,15 +58,26 @@ public class CthulhuController : SubjectMonoBehaviour
         return currentRage;
     }
 
+    public bool IsDying()
+    {
+        return dying;
+    }
+
     void Update()
     {
+        if (!dying && currentHP <= 0)
+            Death();
+        else if (dying)
+            return;
+
         if (!alreadyRaged && currentRage >= neededRagePoints)
         {
             myAnimator.SetTrigger("Rage");
             alreadyRaged = true;
             Invoke("KillCoelho", lightningDelay);
         }
-        else if (!haveCooldown && Input.GetKeyDown(GameController.Instance.cthulhuDefenseKey))
+
+        if (!alreadyRaged && !haveCooldown && Input.GetKeyDown(GameController.Instance.cthulhuDefenseKey))
             this.Defense();
 
         if (IsBeingDamaged())
@@ -76,15 +88,20 @@ public class CthulhuController : SubjectMonoBehaviour
         else
         // Reset damage effect
         {
-            mySpriteRenderer.color = initialColor;
-            damageCurrentDuration = 0f;
-            transform.localPosition = originalPos;
+            ResetDamageEffect();
         }
     }
 
     private void KillCoelho()
     {
         GameController.Instance.KillCoelho();
+    }
+
+    private void ResetDamageEffect()
+    {
+        mySpriteRenderer.color = initialColor;
+        damageCurrentDuration = 0f;
+        transform.localPosition = originalPos;
     }
 
     public bool IsBeingDamaged()
@@ -117,8 +134,18 @@ public class CthulhuController : SubjectMonoBehaviour
         return coelhoTarget.position;
     }
 
+    private void Death()
+    {
+        dying = true;
+        ResetDamageEffect();
+        myAnimator.SetTrigger("Death");
+        Notify();
+    }
+
     private void DamageByWord()
     {
+        if (alreadyRaged || dying)
+            return;
         mySpriteRenderer.color = Color.red;
         this.damageCurrentDuration = damageEffectTime;
         this.currentHP -= this.hitHPDamage;

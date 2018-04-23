@@ -38,6 +38,11 @@ public class GameController : MonoBehaviour
         return cthulhuController.GetCoelhoTarget();
     }
 
+    public bool IsCthulhuDead()
+    {
+        return cthulhuController.IsDying();
+    }
+
     public void KillCoelho()
     {
         Instantiate(lightningPrefab, this.DynamicTransform).transform.position = coelhoController.headPosition.position;
