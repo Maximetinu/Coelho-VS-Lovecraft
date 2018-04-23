@@ -12,10 +12,12 @@ public class AudioController : MonoBehaviour
 
     private AudioSource myAudioSource { get { return GetComponent<AudioSource>(); } }
 
-    public AudioClip CthulhuDeath, CthulhuRage, CthulhuRageStarts, ClickEffect, HoverEffect, Thunder, ThunderStarts;
+    [SerializeField]
+    AudioClip CthulhuDeath, CthulhuRage, CthulhuRageStarts, ClickEffect, HoverEffect, Thunder, ThunderStarts;
 
     [Space(20)]
-    public List<AudioClip> CthulhuPain, CthulhuDefenseWhiplash, ThrowWord, WordDamageExplosion, WordDefenseExplosion, WordHit;
+    [SerializeField]
+    List<AudioClip> CthulhuPain, CthulhuDefenseWhiplash, ThrowWord, WordDamageExplosion, WordDefenseExplosion, WordHit;
 
     void Awake()
     {

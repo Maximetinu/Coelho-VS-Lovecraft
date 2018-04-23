@@ -23,7 +23,7 @@ public class CoelhoController : MonoBehaviour
 
     void Update()
     {
-        if (!dying && !HaveCooldown() && Input.GetKeyDown(GameController.Instance.coelhoAttackKey) && !GameController.Instance.IsCthulhuDead())
+        if (!dying && !HaveCooldown() && Input.GetKeyDown(GameController.Instance.coelhoAttackKey) && GameController.Instance.IsInputEnabled())
             FireWord();
     }
 

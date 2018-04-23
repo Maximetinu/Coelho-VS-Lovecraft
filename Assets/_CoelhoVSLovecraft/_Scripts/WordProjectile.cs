@@ -8,8 +8,9 @@ public class WordProjectile : MonoBehaviour
 
     [Header("Main properties")]
     public string wordText = "PLACEHOLDER";
-    public float rotationSpeed = 1.0f;
-    public float projectileSpeed = 1.0f;
+    public float rotationSpeed = 625.0f;
+    public float projectileSpeed = 9.0f;
+    public float randomSpeed = 5.0f;
     public Vector2 target; // CTHULU.pos
 
     [Space(10)]
@@ -27,6 +28,9 @@ public class WordProjectile : MonoBehaviour
 
     private Vector2 direction; // CTHULU.pos - COELHO.pos
 
+    private float extraSpeed;
+    private float extraRotation;
+
     void Start()
     {
         GetComponent<TextMeshPro>().text = this.wordText;
@@ -34,6 +38,9 @@ public class WordProjectile : MonoBehaviour
 
         this.transform.localScale = Vector2.one * initialScale;
         StartCoroutine(ScaleOverTime(timeToResetScale));
+
+        extraSpeed = projectileSpeed + Random.Range(-randomSpeed, randomSpeed);
+        extraRotation = rotationSpeed / projectileSpeed * (projectileSpeed + extraSpeed);
     }
 
     private IEnumerator ScaleOverTime(float time)
@@ -53,8 +60,9 @@ public class WordProjectile : MonoBehaviour
 
     void Update()
     {
-        transform.position = transform.position + ToVector3(direction).normalized * projectileSpeed * Time.deltaTime;
-        transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
+
+        transform.position = transform.position + ToVector3(direction).normalized * (extraSpeed) * Time.deltaTime;
+        transform.Rotate(Vector3.forward * (extraRotation) * Time.deltaTime);
     }
 
     private Vector3 ToVector3(Vector2 vector)

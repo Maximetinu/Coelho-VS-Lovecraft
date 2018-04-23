@@ -16,6 +16,7 @@ public class CthulhuController : SubjectMonoBehaviour
 
     [Space(5)]
     public float defenseCooldown = .5f;
+    private float cooldownRandom = 0.5f;
 
     [Space(10)]
     [Header("Damaging Effect Properties")]
@@ -79,7 +80,7 @@ public class CthulhuController : SubjectMonoBehaviour
             Invoke("KillCoelho", lightningDelay);
         }
 
-        if (!alreadyRaged && !haveCooldown && Input.GetKeyDown(GameController.Instance.cthulhuDefenseKey))
+        if (!alreadyRaged && !haveCooldown && Input.GetKeyDown(GameController.Instance.cthulhuDefenseKey) && GameController.Instance.IsInputEnabled())
             this.Defense();
 
         if (IsBeingDamaged())
@@ -123,7 +124,7 @@ public class CthulhuController : SubjectMonoBehaviour
             Notify();
         }
         haveCooldown = true;
-        Invoke("ResetCooldown", defenseCooldown);
+        Invoke("ResetCooldown", defenseCooldown + Random.Range(-cooldownRandom, cooldownRandom));
     }
 
     // Another way of implementing cooldown
@@ -139,6 +140,7 @@ public class CthulhuController : SubjectMonoBehaviour
 
     private void Death()
     {
+        GameController.Instance.CthulhuIsDead();
         AudioController.Instance.StartCoroutine(AudioController.Instance.PlayCthulhuDeath());
         dying = true;
         ResetDamageEffect();

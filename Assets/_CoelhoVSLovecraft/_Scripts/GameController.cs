@@ -13,6 +13,10 @@ public class GameController : MonoBehaviour
     public KeyCode coelhoAttackKey = KeyCode.K;
     public KeyCode cthulhuDefenseKey = KeyCode.S;
 
+    [Space(5)]
+    public float inputWaitTime = 5.0f;
+    private bool inputEnabled = false;
+
     [Space(20)]
     [Header("References")]
     public GameObject lightningPrefab;
@@ -33,6 +37,21 @@ public class GameController : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        Invoke("EnableInput", inputWaitTime);
+    }
+
+    private void EnableInput()
+    {
+        inputEnabled = true;
+    }
+
+    public bool IsInputEnabled()
+    {
+        return inputEnabled;
+    }
+
     public Vector2 GetCthulhuTarget()
     {
         return cthulhuController.GetCoelhoTarget();
@@ -43,8 +62,14 @@ public class GameController : MonoBehaviour
         return cthulhuController.IsDying();
     }
 
+    public void CthulhuIsDead()
+    {
+        inputEnabled = false;
+    }
+
     public void KillCoelho()
     {
+        inputEnabled = false;
         Instantiate(lightningPrefab, this.DynamicTransform).transform.position = coelhoController.headPosition.position;
         AudioController.Instance.PlayThunderStarts();
         AudioController.Instance.StartCoroutine(AudioController.Instance.PlayThunder(0.7f));
