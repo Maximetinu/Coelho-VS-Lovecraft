@@ -116,12 +116,15 @@ public class CthulhuController : SubjectMonoBehaviour
     {
         myAnimator.SetTrigger("Defense");
         AudioController.Instance.PlayCthulhuDefenseWhiplash();
-        RaycastHit2D hit2D = Physics2D.Raycast(defenseVertical.position, Vector2.down);
-        if (hit2D && hit2D.collider.tag == "Word")
+        RaycastHit2D[] hits2D = Physics2D.RaycastAll(defenseVertical.position, Vector2.down);
+        foreach (RaycastHit2D hit in hits2D)
         {
-            hit2D.collider.GetComponent<WordProjectile>().DestroyWord(destroyDelay);
-            this.currentRage += rageIncrement;
-            Notify();
+            if (hit.collider.tag == "Word")
+            {
+                hit.collider.GetComponent<WordProjectile>().DestroyWord(destroyDelay);
+                this.currentRage += rageIncrement;
+                Notify();
+            }
         }
         haveCooldown = true;
         Invoke("ResetCooldown", defenseCooldown + Random.Range(-cooldownRandom, cooldownRandom));

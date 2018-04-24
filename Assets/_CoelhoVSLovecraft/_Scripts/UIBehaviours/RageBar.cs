@@ -11,7 +11,7 @@ public class RageBar : MonoBehaviour, IObserver
     void Start()
     {
         GameController.Instance.cthulhuController.AddObserver(this);
-        rageSlider.maxValue = GameController.Instance.cthulhuController.maxHealthPoints;
+        rageSlider.maxValue = GameController.Instance.cthulhuController.neededRagePoints;
         rageSlider.value = GameController.Instance.cthulhuController.GetCurrentRage();
     }
 
