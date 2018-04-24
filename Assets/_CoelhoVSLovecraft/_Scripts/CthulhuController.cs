@@ -16,7 +16,7 @@ public class CthulhuController : SubjectMonoBehaviour
 
     [Space(5)]
     public float defenseCooldown = .5f;
-    private float cooldownRandom = 0.5f;
+    public float cooldownRandom = 0.5f;
 
     [Space(10)]
     [Header("Damaging Effect Properties")]

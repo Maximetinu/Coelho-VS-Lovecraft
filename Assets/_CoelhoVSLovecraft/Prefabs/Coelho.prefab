@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53bb02a16669543499b4580d3211f636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordCooldown: 1
+  wordCooldown: 0.5
   coelhoWords:
   - AMOR
   - "SUE\xD1OS"
