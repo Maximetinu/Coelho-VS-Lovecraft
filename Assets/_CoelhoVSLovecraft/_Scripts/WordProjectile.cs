@@ -11,7 +11,7 @@ public class WordProjectile : MonoBehaviour
     public float rotationSpeed = 625.0f;
     public float projectileSpeed = 9.0f;
     public float randomSpeed = 5.0f;
-    public Vector2 target; // CTHULU.pos
+    public Vector2 target; // CTHULHU.pos
 
     [Space(10)]
     [Header("Scaling")]
@@ -26,7 +26,7 @@ public class WordProjectile : MonoBehaviour
     public GameObject explosionAirPrefab;
     public Vector2 explosionAirOffset = Vector2.zero;
 
-    private Vector2 direction; // CTHULU.pos - COELHO.pos
+    private Vector2 direction; // CTHULHU.pos - COELHO.pos
 
     private float extraSpeed;
     private float extraRotation;
