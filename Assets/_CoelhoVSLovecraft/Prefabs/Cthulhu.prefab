@@ -205,10 +205,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoints: 200
-  hitHPDamage: 200
+  hitHPDamage: 10
   destroyDelay: 0.1
-  neededRagePoints: 270
-  rageIncrement: 270
+  neededRagePoints: 280
+  rageIncrement: 10
   lightningDelay: 2
   defenseCooldown: 0.5
   damageEffectTime: 0.5

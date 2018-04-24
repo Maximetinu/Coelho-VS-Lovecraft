@@ -38,9 +38,9 @@ public class SceneFadeInOut : MonoBehaviour
         }
     }
 
-    void OnValidate()
-    {
-        if (Image == null)
-            Debug.LogError("GameController: FadeInOut Image is null");
-    }
+    // void OnValidate()
+    // {
+    //     if (Image == null)
+    //         Debug.LogError("GameController: FadeInOut Image is null");
+    // }
 }
