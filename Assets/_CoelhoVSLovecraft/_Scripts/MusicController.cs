@@ -31,6 +31,11 @@ public class MusicController : MonoBehaviour
         this.FadeIn();
     }
 
+    public void SetNewSong(AudioClip song)
+    {
+        myAudioSource.clip = song;
+    }
+
     public void FadeIn()
     {
         StartCoroutine(FadeIn(fadeInTime));

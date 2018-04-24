@@ -204,11 +204,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e082fdd4ba15643b93b696a31c22e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 100
-  hitHPDamage: 50
+  maxHealthPoints: 200
+  hitHPDamage: 200
   destroyDelay: 0.1
-  neededRagePoints: 100
-  rageIncrement: 50
+  neededRagePoints: 270
+  rageIncrement: 270
   lightningDelay: 2
   defenseCooldown: 0.5
   damageEffectTime: 0.5

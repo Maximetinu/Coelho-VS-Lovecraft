@@ -8,6 +8,39 @@ TextureImporter:
     21300002: Cthulhu_Death_1
     21300004: Cthulhu_Death_2
     21300006: Cthulhu_Death_3
+    21300008: Cthulhu_Death_4
+    21300010: Cthulhu_Death_5
+    21300012: Cthulhu_Death_6
+    21300014: Cthulhu_Death_7
+    21300016: Cthulhu_Death_8
+    21300018: Cthulhu_Death_9
+    21300020: Cthulhu_Death_10
+    21300022: Cthulhu_Death_11
+    21300024: Cthulhu_Death_12
+    21300026: Cthulhu_Death_13
+    21300028: Cthulhu_Death_14
+    21300030: Cthulhu_Death_15
+    21300032: Cthulhu_Death_16
+    21300034: Cthulhu_Death_17
+    21300036: Cthulhu_Death_18
+    21300038: Cthulhu_Death_19
+    21300040: Cthulhu_Death_20
+    21300042: Cthulhu_Death_21
+    21300044: Cthulhu_Death_22
+    21300046: Cthulhu_Death_23
+    21300048: Cthulhu_Death_24
+    21300050: Cthulhu_Death_25
+    21300052: Cthulhu_Death_26
+    21300054: Cthulhu_Death_27
+    21300056: Cthulhu_Death_28
+    21300058: Cthulhu_Death_29
+    21300060: Cthulhu_Death_30
+    21300062: Cthulhu_Death_31
+    21300064: Cthulhu_Death_32
+    21300066: Cthulhu_Death_33
+    21300068: Cthulhu_Death_34
+    21300070: Cthulhu_Death_35
+    21300072: Cthulhu_Death_36
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -62,7 +95,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -72,7 +105,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -82,7 +115,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: iPhone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -92,7 +125,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -102,7 +135,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Windows Store Apps
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -161,6 +194,468 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 471
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_4
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_5
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_6
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_7
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_8
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_9
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_10
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_11
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_12
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_13
+      rect:
+        serializedVersion: 2
+        x: 2041
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_14
+      rect:
+        serializedVersion: 2
+        x: 2198
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_15
+      rect:
+        serializedVersion: 2
+        x: 2355
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_16
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_17
+      rect:
+        serializedVersion: 2
+        x: 2669
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_18
+      rect:
+        serializedVersion: 2
+        x: 2826
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_19
+      rect:
+        serializedVersion: 2
+        x: 2983
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_20
+      rect:
+        serializedVersion: 2
+        x: 3140
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_21
+      rect:
+        serializedVersion: 2
+        x: 3297
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_22
+      rect:
+        serializedVersion: 2
+        x: 3454
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_23
+      rect:
+        serializedVersion: 2
+        x: 3611
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_24
+      rect:
+        serializedVersion: 2
+        x: 3768
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_25
+      rect:
+        serializedVersion: 2
+        x: 3925
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_26
+      rect:
+        serializedVersion: 2
+        x: 4082
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_27
+      rect:
+        serializedVersion: 2
+        x: 4239
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_28
+      rect:
+        serializedVersion: 2
+        x: 4396
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_29
+      rect:
+        serializedVersion: 2
+        x: 4553
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_30
+      rect:
+        serializedVersion: 2
+        x: 4710
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_31
+      rect:
+        serializedVersion: 2
+        x: 4867
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_32
+      rect:
+        serializedVersion: 2
+        x: 5024
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_33
+      rect:
+        serializedVersion: 2
+        x: 5181
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_34
+      rect:
+        serializedVersion: 2
+        x: 5338
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_35
+      rect:
+        serializedVersion: 2
+        x: 5495
+        y: 0
+        width: 157
+        height: 139
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cthulhu_Death_36
+      rect:
+        serializedVersion: 2
+        x: 5652
         y: 0
         width: 157
         height: 139

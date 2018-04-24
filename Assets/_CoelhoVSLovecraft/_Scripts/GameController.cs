@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class GameController : MonoBehaviour
     [Space(20)]
     [Header("References")]
     public GameObject lightningPrefab;
+    public AudioClip endingMusic;
+    [Space(5)]
+    public GameObject CoelhoWinsPrefab;
+    public GameObject CthulhuWinsPrefab;
 
     [HideInInspector]
     public CthulhuController cthulhuController;
@@ -40,6 +45,46 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Invoke("EnableInput", inputWaitTime);
+    }
+
+    private void Ending(bool coelhoWins)
+    {
+        float endingWait;
+        float winWait;
+        if (coelhoWins)
+        {
+            endingWait = 14.0f;
+            winWait = 16.0f;
+        }
+        else
+        {
+            endingWait = 8.0f;
+            winWait = 10.0f;
+        }
+        MusicController.Instance.FadeOut();
+        Invoke("EndingWait", endingWait);
+        if (coelhoWins)
+            Invoke("CoelhoWins", winWait);
+        else
+            Invoke("CthulhuWins", winWait);
+    }
+
+    private void EndingWait()
+    {
+        GetComponent<SceneFadeInOut>().Image.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+        GetComponent<SceneFadeInOut>().FadeOut();
+    }
+
+    private void CoelhoWins()
+    {
+        Instantiate(CoelhoWinsPrefab, GetComponent<SceneFadeInOut>().Image.transform);
+    }
+
+    private void CthulhuWins()
+    {
+        MusicController.Instance.SetNewSong(endingMusic);
+        MusicController.Instance.FadeIn();
+        Instantiate(CthulhuWinsPrefab, GetComponent<SceneFadeInOut>().Image.transform);
     }
 
     private void EnableInput()
@@ -64,16 +109,24 @@ public class GameController : MonoBehaviour
 
     public void CthulhuIsDead()
     {
+        this.Ending(true);
         inputEnabled = false;
     }
 
     public void KillCoelho()
     {
+        this.Ending(false);
         inputEnabled = false;
         Instantiate(lightningPrefab, this.DynamicTransform).transform.position = coelhoController.headPosition.position;
         AudioController.Instance.PlayThunderStarts();
         AudioController.Instance.StartCoroutine(AudioController.Instance.PlayThunder(0.7f));
         coelhoController.Death();
+    }
+
+    public void ReturnToMainMenu()
+    {
+        Debug.Log("MAINMENUUU!!");
+        SceneManager.LoadScene("MainMenu");
     }
 
     void Awake()

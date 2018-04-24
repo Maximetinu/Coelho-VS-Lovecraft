@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4747917680180334}
   - component: {fileID: 114796695087603736}
+  - component: {fileID: 114945409536007602}
   m_Layer: 0
   m_Name: '@GameController'
   m_TagString: Untagged
@@ -51,9 +52,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b21692945caca748aae8dd1ac1157f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coelhoAttackKey: 107
-  cthulhuDefenseKey: 115
+  coelhoAttackKey: 112
+  cthulhuDefenseKey: 113
+  inputWaitTime: 5
   lightningPrefab: {fileID: 1051397889154864, guid: f3317420e1872d54c957f1d7ac1a7583,
+    type: 2}
+  endingMusic: {fileID: 8300000, guid: e432a7a98095b9c4a99393252ea63d5f, type: 3}
+  CoelhoWinsPrefab: {fileID: 1251376939175082, guid: 58c9ec9edf1c2d7439a0fed8c6229893,
+    type: 2}
+  CthulhuWinsPrefab: {fileID: 1251376939175082, guid: 68f65772a8113a14985538786e20d6e9,
     type: 2}
   cthulhuController: {fileID: 0}
   coelhoController: {fileID: 0}
+--- !u!114 &114945409536007602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1451982792369802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb05e6d6b185ff45986c20dc5d022d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Image: {fileID: 0}
+  FadeTime: 5

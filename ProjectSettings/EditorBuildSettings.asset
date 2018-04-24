@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_CoelhoVSLovecraft/_Scenes/MainMenu.unity
+    guid: 4d0389f68497ea44caa7c255935b8f3c
+  - enabled: 1
+    path: Assets/_CoelhoVSLovecraft/_Scenes/Battle.unity
+    guid: 4335efaa935c5af4eb3119aef11e17a4

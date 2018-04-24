@@ -52,7 +52,7 @@ public class CthulhuHUD : MonoBehaviour, IObserver
         if (GameController.Instance.IsCthulhuDead())
         {
             CancelInvoke("NextFrame");
-            Debug.Log("Cthulhu HUD Fade out");
+            GetComponent<FlashingAndDisappearing>().Flash();
         }
     }
 
