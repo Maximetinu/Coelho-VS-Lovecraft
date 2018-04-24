@@ -308,7 +308,7 @@ MonoBehaviour:
   wordText: PLACEHOLDER
   rotationSpeed: 625
   projectileSpeed: 9
-  randomSpeed: 5
+  randomSpeed: 7
   target: {x: 2, y: 2}
   initialScale: 0.3
   timeToResetScale: 0.2
