@@ -30,6 +30,11 @@ public class CthulhuController : SubjectMonoBehaviour
     public Transform coelhoTarget;
     public Transform defenseVertical;
 
+    [Space(50)]
+    [Header("Enable AI?")]
+    public bool AIEnabled = false;
+    public Transform AimingAI;
+
     private SpriteRenderer mySpriteRenderer { get { return GetComponent<SpriteRenderer>(); } }
     private Animator myAnimator { get { return GetComponent<Animator>(); } }
     private Color initialColor;
@@ -49,6 +54,11 @@ public class CthulhuController : SubjectMonoBehaviour
         currentRage = 0.0f;
     }
 
+    public bool GetTouchInput()
+    {
+        return (Input.touchCount > 0 && Input.GetTouch(0).position.y < Screen.width / 2);
+    }
+
     public float GetCurrentHP()
     {
         return currentHP;
@@ -64,7 +74,7 @@ public class CthulhuController : SubjectMonoBehaviour
         return dying;
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (!dying && currentHP <= 0)
             Death();
@@ -80,7 +90,7 @@ public class CthulhuController : SubjectMonoBehaviour
             Invoke("KillCoelho", lightningDelay);
         }
 
-        if (!alreadyRaged && !haveCooldown && Input.GetKeyDown(GameController.Instance.cthulhuDefenseKey) && GameController.Instance.IsInputEnabled())
+        if (DoDefense())
             this.Defense();
 
         if (IsBeingDamaged())
@@ -93,6 +103,28 @@ public class CthulhuController : SubjectMonoBehaviour
         {
             ResetDamageEffect();
         }
+    }
+
+    private bool DoDefense()
+    {
+        if (!AIEnabled)
+        {
+            bool input;
+            if (Application.platform == RuntimePlatform.Android)
+                input = GetTouchInput();
+            else
+                input = Input.GetKeyDown(GameController.Instance.cthulhuDefenseKey);
+            return (!alreadyRaged && !haveCooldown && input && GameController.Instance.IsInputEnabled());
+        }
+
+        else
+            return (!alreadyRaged && !haveCooldown && GetAIInput() && GameController.Instance.IsInputEnabled());
+    }
+
+    private bool GetAIInput()
+    {
+        RaycastHit2D[] hits2D = Physics2D.RaycastAll(AimingAI.position, Vector2.down);
+        return (hits2D.Length > 0);
     }
 
     private void KillCoelho()

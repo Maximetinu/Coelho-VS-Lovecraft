@@ -17,23 +17,52 @@ public class CoelhoController : MonoBehaviour
     public Transform headPosition;
     public GameObject wordProjectilePrefab;
 
+    [Space(50)]
+    [Header("Enable AI")]
+    public bool AIEnabled = false;
+    public float wordCooldownRandom = 0.4f;
+    private float currentExtraCooldown = 0.0f;
+
     private float lastShotTime = -999.9f;
     private Animator myAnimator { get { return GetComponent<Animator>(); } }
     private bool dying = false;
 
+    void Start()
+    {
+        DecideExtraCooldown();
+    }
+
+    public bool GetTouchInput()
+    {
+        return (Input.touchCount > 0 && Input.GetTouch(0).position.y > Screen.width / 2);
+    }
+
+    private void DecideExtraCooldown()
+    {
+        currentExtraCooldown = wordCooldown + Random.Range(-wordCooldownRandom, +wordCooldownRandom);
+    }
+
     void Update()
     {
-        if (!dying && !HaveCooldown() && Input.GetKeyDown(GameController.Instance.coelhoAttackKey) && GameController.Instance.IsInputEnabled())
+        bool input;
+        if (Application.platform == RuntimePlatform.Android)
+            input = GetTouchInput();
+        else
+            input = Input.GetKeyDown(GameController.Instance.coelhoAttackKey);
+        if (AIEnabled)
+            input = true;
+        if (!dying && !HaveCooldown() && input && GameController.Instance.IsInputEnabled())
             FireWord();
     }
 
     private bool HaveCooldown()
     {
-        return (Time.time - lastShotTime < wordCooldown);
+        return (Time.time - lastShotTime < (wordCooldown + currentExtraCooldown));
     }
 
     private void FireWord()
     {
+        DecideExtraCooldown();
         GameObject firingWord = Instantiate(wordProjectilePrefab, GameController.Instance.DynamicTransform);
         firingWord.GetComponent<WordProjectile>().wordText = GetRandomWord();
         firingWord.transform.position = wordSpawn.position;

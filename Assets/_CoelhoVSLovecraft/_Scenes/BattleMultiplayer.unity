@@ -739,31 +739,31 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114146571462487102, guid: b61b6d011e32a144c897ca2f1da0d69e,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146571462487102, guid: b61b6d011e32a144c897ca2f1da0d69e,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114106469552924534, guid: b61b6d011e32a144c897ca2f1da0d69e,
+        type: 2}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114106469552924534, guid: b61b6d011e32a144c897ca2f1da0d69e,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114982092761940948, guid: b61b6d011e32a144c897ca2f1da0d69e,
         type: 2}
       propertyPath: HUDPosition
       value: 
       objectReference: {fileID: 764856844}
-    - target: {fileID: 114106469552924534, guid: b61b6d011e32a144c897ca2f1da0d69e,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114106469552924534, guid: b61b6d011e32a144c897ca2f1da0d69e,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114146571462487102, guid: b61b6d011e32a144c897ca2f1da0d69e,
-        type: 2}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114146571462487102, guid: b61b6d011e32a144c897ca2f1da0d69e,
-        type: 2}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 224929160151623574, guid: b61b6d011e32a144c897ca2f1da0d69e,
         type: 2}
       propertyPath: m_AnchorMax.x

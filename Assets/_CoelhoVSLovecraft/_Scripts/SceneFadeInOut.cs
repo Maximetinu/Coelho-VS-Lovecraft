@@ -23,6 +23,11 @@ public class SceneFadeInOut : MonoBehaviour
         StartCoroutine(Fade(Image, FadeTime, Color.clear, Color.white));
     }
 
+    public void FadeOutToBlack()
+    {
+        StartCoroutine(Fade(Image, FadeTime, Color.clear, Color.black));
+    }
+
     IEnumerator Fade(RawImage mat, float duration, Color startColor, Color endColor)
     {
         float start = Time.time;

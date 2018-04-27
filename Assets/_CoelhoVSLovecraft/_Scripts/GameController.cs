@@ -31,6 +31,8 @@ public class GameController : MonoBehaviour
     [HideInInspector]
     public CoelhoController coelhoController;
 
+    private bool videoAIScene = false;
+
     public Transform DynamicTransform
     {
         get
@@ -44,7 +46,22 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        if (coelhoController.AIEnabled && cthulhuController.AIEnabled)
+            videoAIScene = true;
         Invoke("EnableInput", inputWaitTime);
+    }
+
+    void Update()
+    {
+        if (!videoAIScene)
+            return;
+        else if (Input.anyKey)
+        {
+            MusicController.Instance.FadeOut();
+            GetComponent<SceneFadeInOut>().FadeOutToBlack();
+            Invoke("ReturnToMainMenu", 5f);
+        }
+
     }
 
     private void Ending(bool coelhoWins)
@@ -82,8 +99,8 @@ public class GameController : MonoBehaviour
 
     private void CthulhuWins()
     {
-        MusicController.Instance.SetNewSong(endingMusic);
-        MusicController.Instance.FadeIn();
+        //MusicController.Instance.SetNewSong(endingMusic);
+        //MusicController.Instance.FadeIn();
         Instantiate(CthulhuWinsPrefab, GetComponent<SceneFadeInOut>().Image.transform);
     }
 
@@ -125,7 +142,6 @@ public class GameController : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        Debug.Log("MAINMENUUU!!");
         SceneManager.LoadScene("MainMenu");
     }
 

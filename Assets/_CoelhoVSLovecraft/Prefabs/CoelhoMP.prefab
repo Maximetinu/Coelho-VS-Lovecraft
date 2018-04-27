@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 95284089534256760}
   - component: {fileID: 114610658711306660}
   m_Layer: 0
-  m_Name: Coelho
+  m_Name: CoelhoMP
   m_TagString: Coelho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,6 +155,8 @@ MonoBehaviour:
   headPosition: {fileID: 4253365741286392}
   wordProjectilePrefab: {fileID: 1394385251812366, guid: 3c5c28a030caccb45a7f99ea73c761bc,
     type: 2}
+  AIEnabled: 0
+  wordCooldownRandom: 0.4
 --- !u!212 &212141279388069492
 SpriteRenderer:
   m_ObjectHideFlags: 1
