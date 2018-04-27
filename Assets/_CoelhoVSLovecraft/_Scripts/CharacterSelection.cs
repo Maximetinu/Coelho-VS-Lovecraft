@@ -7,7 +7,9 @@ public class CharacterSelection : MonoBehaviour
 {
     public UnityEvent onSelect;
     public UnityEvent onUnselect;
+
     private bool currentlySelected = false;
+    private bool touchEnabled = true;
 
     void Start()
     {
@@ -18,15 +20,22 @@ public class CharacterSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount == 1)
+        if (Input.touchCount == 1 && touchEnabled)
         {
             Vector3 wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
             Vector2 touchPos = new Vector2(wp.x, wp.y);
             if (GetComponent<Collider2D>() == Physics2D.OverlapPoint(touchPos))
             {
                 ToggleSelect();
+                touchEnabled = false;
+                Invoke("RestoreTouch", 2.0f);
             }
         }
+    }
+
+    private void RestoreTouch()
+    {
+        touchEnabled = true;
     }
 
     private void ToggleSelect()

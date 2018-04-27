@@ -26,6 +26,7 @@ public class CoelhoController : MonoBehaviour
     private float lastShotTime = -999.9f;
     private Animator myAnimator { get { return GetComponent<Animator>(); } }
     private bool dying = false;
+    private bool hasStopTouching = true;
 
     void Start()
     {
@@ -34,7 +35,7 @@ public class CoelhoController : MonoBehaviour
 
     public bool GetTouchInput()
     {
-        return (Input.touchCount > 0 && Input.GetTouch(0).position.y > Screen.width / 2);
+        return (Input.touchCount > 0 && Input.GetTouch(0).position.x > Screen.width / 2);
     }
 
     private void DecideExtraCooldown()
@@ -46,13 +47,18 @@ public class CoelhoController : MonoBehaviour
     {
         bool input;
         if (Application.platform == RuntimePlatform.Android)
-            input = GetTouchInput();
+            input = GetTouchInput() && hasStopTouching;
         else
             input = Input.GetKeyDown(GameController.Instance.coelhoAttackKey);
         if (AIEnabled)
             input = true;
         if (!dying && !HaveCooldown() && input && GameController.Instance.IsInputEnabled())
             FireWord();
+
+        if (Input.touchCount == 0)
+            hasStopTouching = true;
+        else
+            hasStopTouching = false;
     }
 
     private bool HaveCooldown()

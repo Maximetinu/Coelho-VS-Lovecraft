@@ -45,6 +45,7 @@ public class CthulhuController : SubjectMonoBehaviour
     private bool haveCooldown = false;
     private bool alreadyRaged = false;
     private bool dying = false;
+    private bool hasStopTouching = true;
 
     void Awake()
     {
@@ -56,7 +57,7 @@ public class CthulhuController : SubjectMonoBehaviour
 
     public bool GetTouchInput()
     {
-        return (Input.touchCount > 0 && Input.GetTouch(0).position.y < Screen.width / 2);
+        return (Input.touchCount > 0 && Input.GetTouch(0).position.x < Screen.width / 2);
     }
 
     public float GetCurrentHP()
@@ -103,6 +104,10 @@ public class CthulhuController : SubjectMonoBehaviour
         {
             ResetDamageEffect();
         }
+        if (Input.touchCount == 0)
+            hasStopTouching = true;
+        else
+            hasStopTouching = false;
     }
 
     private bool DoDefense()
@@ -111,7 +116,7 @@ public class CthulhuController : SubjectMonoBehaviour
         {
             bool input;
             if (Application.platform == RuntimePlatform.Android)
-                input = GetTouchInput();
+                input = GetTouchInput() && hasStopTouching;
             else
                 input = Input.GetKeyDown(GameController.Instance.cthulhuDefenseKey);
             return (!alreadyRaged && !haveCooldown && input && GameController.Instance.IsInputEnabled());
@@ -124,7 +129,9 @@ public class CthulhuController : SubjectMonoBehaviour
     private bool GetAIInput()
     {
         RaycastHit2D[] hits2D = Physics2D.RaycastAll(AimingAI.position, Vector2.down);
-        return (hits2D.Length > 0);
+        bool targetFound = (hits2D.Length > 0);
+        Debug.Log(targetFound);
+        return targetFound;
     }
 
     private void KillCoelho()
