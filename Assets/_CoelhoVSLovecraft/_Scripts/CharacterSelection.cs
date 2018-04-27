@@ -24,20 +24,68 @@ public class CharacterSelection : MonoBehaviour
             Vector2 touchPos = new Vector2(wp.x, wp.y);
             if (GetComponent<Collider2D>() == Physics2D.OverlapPoint(touchPos))
             {
-                currentlySelected = !currentlySelected;
-                if (currentlySelected)
-                {
-                    onSelect.Invoke();
-                    GetComponent<SpriteRenderer>().color = Color.white;
-                    GetComponent<Animator>().enabled = true;
-                }
-                else
-                {
-                    onUnselect.Invoke();
-                    GetComponent<SpriteRenderer>().color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
-                    GetComponent<Animator>().enabled = false;
-                }
+                ToggleSelect();
             }
         }
+    }
+
+    private void ToggleSelect()
+    {
+        currentlySelected = !currentlySelected;
+        if (currentlySelected)
+        {
+            Select();
+        }
+        else
+        {
+            Unselect();
+        }
+    }
+
+    private void Select()
+    {
+        onSelect.Invoke();
+        GetComponent<SpriteRenderer>().color = Color.white;
+        GetComponent<Animator>().enabled = true;
+    }
+
+    private void Unselect()
+    {
+        onUnselect.Invoke();
+        GetComponent<SpriteRenderer>().color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
+        GetComponent<Animator>().enabled = false;
+    }
+
+    private void Hover()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 0.7f, 0.7f);
+        GetComponent<Animator>().enabled = true;
+    }
+
+    private void UnHover()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(0.3f, 0.3f, 0.3f, 0.3f);
+        GetComponent<Animator>().enabled = false;
+    }
+
+    void OnMouseDown()
+    {
+        ToggleSelect();
+        MainMenuController.Instance.PlayClickAudio();
+    }
+
+    void OnMouseEnter()
+    {
+        if (currentlySelected)
+            return;
+        MainMenuController.Instance.PlayHoverAudio();
+        Hover();
+    }
+
+    void OnMouseExit()
+    {
+        if (currentlySelected)
+            return;
+        UnHover();
     }
 }

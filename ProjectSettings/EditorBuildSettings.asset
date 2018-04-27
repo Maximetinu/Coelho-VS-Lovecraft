@@ -9,5 +9,14 @@ EditorBuildSettings:
     path: Assets/_CoelhoVSLovecraft/_Scenes/MainMenu.unity
     guid: 4d0389f68497ea44caa7c255935b8f3c
   - enabled: 1
-    path: Assets/_CoelhoVSLovecraft/_Scenes/Battle.unity
+    path: Assets/_CoelhoVSLovecraft/_Scenes/BattleMultiplayer.unity
     guid: 4335efaa935c5af4eb3119aef11e17a4
+  - enabled: 1
+    path: Assets/_CoelhoVSLovecraft/_Scenes/BattleCoelhoPlayer.unity
+    guid: 9935c1dfd1a9f52449f6996996a98d2f
+  - enabled: 1
+    path: Assets/_CoelhoVSLovecraft/_Scenes/BattleCthulhuPlayer.unity
+    guid: d4a9ee15ca23bc9418608498c6a42b10
+  - enabled: 1
+    path: Assets/_CoelhoVSLovecraft/_Scenes/BattleBothAI.unity
+    guid: a70f7e99f1b59ef468b641180ddc792b

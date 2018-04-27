@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
+    // Singleton
+    private static MainMenuController m_instance;
+    public static MainMenuController Instance { get { return m_instance; } }
 
     public enum SelectedCharacter
     {
@@ -18,6 +21,20 @@ public class MainMenuController : MonoBehaviour
     public SelectedCharacter currentCharacter = SelectedCharacter.NONE;
     public float videoAITime = 60.0f;
     public Button playButton;
+    public AudioClip MouseClick;
+    public AudioClip MouseHover;
+
+    void Awake()
+    {
+        if (m_instance == null)
+        {
+            m_instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -34,6 +51,17 @@ public class MainMenuController : MonoBehaviour
         {
             playButton.interactable = true;
         }
+
+        if (Input.anyKey || MouseMoved())
+        {
+            CancelInvoke("RunAIVideo");
+            Invoke("RunAIVideo", videoAITime);
+        }
+    }
+
+    private bool MouseMoved()
+    {
+        return (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0);
     }
 
     public void CthulhuSelected()
@@ -94,5 +122,13 @@ public class MainMenuController : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+    public void PlayClickAudio()
+    {
+        GetComponent<AudioSource>().PlayOneShot(MouseClick);
+    }
+    public void PlayHoverAudio()
+    {
+        GetComponent<AudioSource>().PlayOneShot(MouseHover);
     }
 }
