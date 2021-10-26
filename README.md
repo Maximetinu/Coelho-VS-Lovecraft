@@ -6,5 +6,5 @@
 - [Google Play app](https://play.google.com/store/apps/details?id=com.Maximetinu.CoelhoVSLovecraft)
 ## Credits
 - Programming by [@Maximetinu](https://www.github.com/maximetinu/)
-- Art by [@n.emesys](https://www.instagram.com/n.emesys/), except background that was taken from itch.io
+- Art by [@nhem](https://www.artstation.com/nhem), except background that was taken from itch.io
 - Music taken from opengameart.org
